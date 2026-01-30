@@ -14,9 +14,8 @@ class MasterDataSeeder extends Seeder
      */
     public function run(): void
     {
-        // Adjust the path to where the SQL file is located relative to the laravel project root
-        // The project root is dps-jasa-raharja. The file is in ../insurance_master_data.sql
-        $path = base_path('../insurance_master_data.sql');
+        // The file is now inside database/sql/insurance_master_data.sql
+        $path = database_path('sql/insurance_master_data.sql');
 
         if (File::exists($path)) {
             $sql = File::get($path);
